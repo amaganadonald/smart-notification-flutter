@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/utils/global.colors.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _DashboardScreenState extends State<DashboardScreen> {
 
   int counter = 0;
   final List<String> items = [
@@ -30,11 +29,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text('SkillRise', style: TextStyle(color: GlobalColors.textColor),)),
-        elevation: 13,
-        backgroundColor: GlobalColors.mainColor,
-      ),
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {
